@@ -10,6 +10,8 @@ export default function (state=initialState,action){
             return {...state,number:state.number+1}
         case types.DECREMENT1:
             return {...state,number:state.number-1}
+        case types.RESET:
+            return initialState
         default:
             return state
     }

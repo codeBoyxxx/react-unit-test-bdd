@@ -1,13 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
-export default function (){
+function NavHeader (props){
     return (
         <div>
             <div>
-                <Link to='counter1'><button>counter1</button></Link>
-                <Link to='counter2'><button>counter2</button></Link>
+                <button className='navButton' id='counter1' onClick={()=>props.history.push('/counter1')}>counter1</button>
+                <button className='navButton' id='counter2' onClick={()=>props.history.push('/counter2')}>counter2</button>
             </div>
         </div>
     )
 }
+
+
+export default withRouter(NavHeader)
+

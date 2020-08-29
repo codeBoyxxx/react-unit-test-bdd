@@ -6,8 +6,8 @@ function Counter2(props){
         <div>
             <p>counter2:{props.number}</p>
             <br/>
-            <button onClick={()=>props.INCREMENT2()}>+</button>
-            <button onClick={()=>props.DECREMENT2()}>-</button>
+            <button className='changeBtn' id="counter2-decrement" onClick={()=>props.INCREMENT2()}>+</button>
+            <button className='changeBtn' onClick={()=>props.DECREMENT2()}>-</button>
         </div>
     )
 }
