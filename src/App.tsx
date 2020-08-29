@@ -6,6 +6,7 @@ import Counter2 from './components/Counter2'
 import store from './store'
 import NavHeader from './components/NavHeader'
 function App() {
+  throw new Error('报错了')
   return (
     <Provider store={store}>
       <Router>
