@@ -6,11 +6,15 @@ import Counter2 from './components/Counter2'
 import store from './store'
 import NavHeader from './components/NavHeader'
 function App() {
-  throw new Error('报错了')
+ 
+  const getError = ()=>{
+    throw new Error('哈哈，我报错了～')
+  }
   return (
     <Provider store={store}>
       <Router>
         <NavHeader />
+        <button onClick={getError}>报错</button>
         <Route path = '/counter1' component={Counter1}/>
         <Route path = '/counter2' component={Counter2}/>
       </Router>
